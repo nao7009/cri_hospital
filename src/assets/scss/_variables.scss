@@ -1,0 +1,44 @@
+/* _variables.scss */
+$breakpoints: (
+  'sm': 340,
+  'md': 768,
+  'lg': 1215,
+) !default;
+@mixin mq($mq, $bp1:lg, $bp2:lg){
+  $w1    : map-get($breakpoints, $bp1);
+  $w2    : map-get($breakpoints, $bp2);
+  $min1  : 'min-width: #{($w1+1)}px';
+  $max1  : 'max-width: #{($w1)}px';
+  $min2  : 'min-width: #{($w1+1)}px';
+  $max2  : 'max-width: #{($w2)}px';
+
+  @if $mq == min {
+    @media screen and ($min1) {
+      @content;
+    }
+  }
+  @else if $mq == max {
+    @media screen and ($max1) {
+      @content;
+    }
+  }
+  @else if $mq == min-max {
+    @media screen and ($min2) and ($max2) {
+      @content;
+    }
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap');
+$mainColor: #FCE6DB;
+$subColor: #fffbe8;
+$linkColor: #D4EBB9;
+
+$mincho: 'Shippori Mincho B1', serif;
+
+$fontColor: #EDB2C9;
+$titleColor: #666;
+$copylightColor: #b5b5b5;
+$lineColor: #A9A9A9;
+$hoverColor: #F2D2CE;
+$accentColor: #BA4E6F;
