@@ -58,7 +58,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .contact{
     width: 85%;
@@ -72,13 +71,15 @@ export default {
         margin: 0 auto;
         border-bottom: 1px solid $lineColor;
         @include mq('max','md') {
-            margin: 30px auto 5px;
+            margin: 20px auto 5px;
         } 
         h2{
             font-size: 20px;
             color: $fontColor;
             @include mq('max','md') {
-                font-size: 16px;
+                margin: 5px;
+                padding: 5px;
+                font-size: 15px;
             }
         }           
     }
@@ -88,12 +89,25 @@ export default {
     margin: 0 auto;
     @include mq('max','md') {
     }
-    table{
+    p{
+        font-size: 16px;
         @include mq('max','md') {
+            margin: 5px;
+            padding: 5px;
+            font-size: 12px;
+        }
+    }
+    table{
+        margin: 10px;
+        padding: 10px;
+        @include mq('max','md') {
+            margin: 5px;
+            padding: 5px;
         }
         td{
             padding-bottom: 30px;
             @include mq('max','md') {
+                font-size: 12px;
             }
         }
         input{
@@ -103,6 +117,7 @@ export default {
             width:250px;
             height:25px;
             @include mq('max','md') {
+                height:20px;
             }
         }
         textarea{
@@ -113,6 +128,8 @@ export default {
             width:400px;
             height:200px;
             @include mq('max','md') {
+                width:300px;
+                height:150px;
             }
         }
     }
@@ -120,7 +137,7 @@ export default {
         display: block;
         background-color: $linkColor;
         border-style: none;
-        border-radius: 15%;
+        border-radius: 10%;
         @include mq('max','md') {
         }
     }

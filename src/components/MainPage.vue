@@ -16,29 +16,41 @@
           </div>
           <div class="service__column">
               <div class="service__columnItems">
+                <div class="service__image">
                   <img src="../assets/images/medical_list_01.jpg">
+                </div>
+                <div class="service__text">
                   <h3>診療項目</h3>
-                  <p>一般内科</p>
-                  <p>整形外科</p>
-                  <p>皮膚科</p>
+                  <p>一般内科<br>整形外科<br>皮膚科</p>
                   <li><router-link to="/medicaltreatment">詳しくはこちら</router-link></li>
+                </div>
               </div>
               <div class="service__columnItems">
+                <div class="service__image">
                   <img src="../assets/images/medical_list_02.jpg">
+                </div>
+                <div class="service__text">
                   <h3>訪問診察</h3>
                   <p>通院が難しい方のために<br>訪問診察を行っております。</p>
                   <li><router-link to="/visitmedical">詳しくはこちら</router-link></li>
+                </div>
               </div>
               <div class="service__columnItems">
+                <div class="service__image">
                   <img src="../assets/images/medical_list_03.jpg">
+                </div>
+                <div class="service__text">
                   <h3>各種健診</h3>
                   <p>特定健診、一般健診を<br>行っております。</p>
                   <li><router-link to="/medicalcheck">詳しくはこちら</router-link></li>
+                </div>
               </div>
           </div>
       </section>
       <section class="news">
-          <h2 class="news__title">お知らせ</h2>
+        <div class="news__title">
+          <h2>お知らせ</h2>
+        </div>
           <ul class="news__list">
               <li>
                 <a href="">
@@ -75,13 +87,9 @@
 <script>
 export default {
   name: 'MainPage',
-  // props: {
-  //   msg: String
-  // }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .main{
     width: 85%;
@@ -111,26 +119,31 @@ export default {
         @include mq('max','md') {
             width: 100%;
             height: 250px;
+            margin: 0 auto;
             font-size: 12px;
+            flex: 1;
+        }
+        img{
+            @include mq('max','md') {
+                width: 250px;
+        }
         }
     }
     &__summery{
+        @include mq('max','md') {
+        }
         h2{
             font-size: 20px;
             color: $fontColor;
             @include mq('max','md') {
-                margin-left: auto;
-                margin-right: 45px;
-                font-size: 20px;
+                font-size: 15px;
             }          
         }
         p{
             font-size: 15px;
             color: $fontColor;
             @include mq('max','md') {
-                margin-left: auto;
-                margin-right: 45px;
-                font-size: 20px;
+                font-size: 10px;
             }          
         }
     }
@@ -141,218 +154,31 @@ export default {
         @include mq('max','md') {
         }
     }
-    &__contentsTitle{
-        border-bottom: 1px solid $lineColor;
-        @include mq('max','md') {
-            margin: 30px auto 5px;
-        } 
-        h2{
-            font-size: 20px;
-            color: $fontColor;
-            @include mq('max','md') {
-                font-size: 16px;
-            }
-        }           
-    }
-    &__contentsText{
-        width: 100%;
-        margin: 0 auto;
-        padding: 10px;
-        background-color: #fffbe8;
-        p{
-            font-size: 16px;
-            line-height: 1.2em;
-            @include mq('max','md') {
-                font-size: 12px;
-            }
-        }
-    }
-    &__medicaltreatment{
-        width: 100%;
-        margin: 0 auto;
-        p{
-            font-size: 16px;
-            line-height: 1.8em;
-            @include mq('max','md') {
-                font-size: 12px;
-                line-height: 1.2em;
-            }
-        }
-        ul{
-            font-size: 18px;
-            line-height: 1.6em;
-            @include mq('max','md') {
-                font-size: 14px;
-                line-height: 1.0em;
-            }
-        }         
-    }
-    &__examinationtime{
-        width: 100%;
-        margin: 0 auto;
-        padding: 20px;
-        @include mq('max','md') {
-        }
-        p{
-            font-size: 17px;
-            line-height: 1.8em;
-            @include mq('max','md') {
-                font-size: 12px;
-            }
-        }
-        table,th,td{
-            border: 1px solid $titleColor; 
-            text-align: center;
-            margin-left: 20px;
-            padding: 10px;
-            font-size: 16px;
-            @include mq('max','md') {
-                font-size: 12px;
-            }
-        }
-        th{
-            background-color: $linkColor;
-            @include mq('max','md') {
-            }
-        }
-    }
-    &__medicalcheck{
-        width: 100%;
-        margin: 0 auto;
-        padding: 30px;
-        @include mq('max','md') {
-        }
-        h3{
-            padding-left: 20px;
-            font-size: 18px;
-            font-weight: 600;
-            @include mq('max','md') {
-            }
-        }
-        h4{
-            margin-top: 10px;
-            padding-left: 20px;
-            font-size: 16px;
-            line-height: 1.8em;
-            color: #f00;
-            @include mq('max','md') {
-                font-size: 12px;
-                line-height: 1.8em;
-            }
-        }
-        p{
-            font-size: 16px;
-            line-height: 1.2em;
-            @include mq('max','md') {
-                font-size: 12px;
-                line-height: 1.2em;
-            }
-        }
-        a{
-            color: #00f;
-            @include mq('max','md') {
-            }
-            &:hover{
-                background: $hoverColor;
-                @include mq('max','md') {
-                }
-            }
-        }
-        table,th,td{
-            border: 1px solid $lineColor; 
-            text-align: center;
-            margin-left: 20px;
-            padding: 10px;
-            font-size: 16px;
-            color: $titleColor;
-            @include mq('max','md') {
-                padding: 5px;
-                font-size: 12px;
-            }
-        }
-        th{
-            background-color: $linkColor;
-            @include mq('max','md') {
-            }
-        }
-    }
-    &__newsItem{
-        padding: 30px;
-        margin-bottom: 20px;
-        background-color: #fffbe8;
-        @include mq('max','md') {
-        }
-        h3{
-            padding-left: 20px;
-            font-size: 18px;
-            line-height: 1.8em;
-            border-bottom: 1px dashed $lineColor;
-            color: $titleColor;
-            @include mq('max','md') {
-                font-size: 16px;
-            }
-        }
-        p{
-            font-size: 16px;
-            line-height: 1.2em;
-            @include mq('max','md') {
-                font-size: 12px;
-            }
-        }
-        h4{
-            padding-left: 20px;
-            font-size: 16px;
-            color: #f00;
-            @include mq('max','md') {
-                font-size: 12px;
-            }
-        }     
-    }
-    &__consultation{
-        width: 100%;
-        margin: 0 auto;
-        padding: 10px;
-        @include mq('max','md') {
-        }
-        h2{
-            font-size: 18px;
-            padding-left: 20px;
-            color: $titleColor;
-            @include mq('max','md') {
-                font-size: 16px;
-            }
-        }
-        ul{
-            @include mq('max','md') {
-                font-size: 15px;
-            }               
-        }
-    }
 }
 .service{
-    margin: 10px auto 100px;
-    padding: 20px 20px 100px;
+    width: 85%;
+    margin: 10px auto 50px;
+    padding: 20px 20px 50px;
     background-color: $subColor;
     @include mq('max','md') {
         width: 100%;
-        margin: 5px auto 50px;
-        padding: 10px 10px 50px;
+        margin: 0 auto;
+        padding: 10px;
     }
     &__message{
         margin-bottom: 60px;
         @include mq('max','md') {
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
         h2{
             font-size: 20px;
             text-align: center;
             color: $titleColor;
             @include mq('max','md') {
-                font-size: 16px;
+                font-size: 15px;
             }              
         }
         p{
-            width: 67%;
             margin: 10px auto 0;
             font-size: 16px;
             text-align: center;
@@ -360,10 +186,8 @@ export default {
             letter-spacing: 2px;
             @include mq('max','md') {
                 width: 100%;
-                font-size: 12px;
-                text-align: center;
+                font-size: 10px;
                 line-height: 1.8;
-                letter-spacing: 2px;
             }             
         }
     }
@@ -371,35 +195,45 @@ export default {
         display: flex;
         justify-content: center;
         @include mq('max','md') {
+            flex-direction: column;
         }
     }
     &__columnItems{
         text-align: center;
         border: 1px solid $lineColor;
         @include mq('max','md') {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
             margin: 5px;
             padding: 5px;
         }
+    }
+    &__image{
         img{
             width: 250px;
             height: 150px;
             @include mq('max','md') {
+                width: 180px;
+                height: 120px;
             } 
         }
+    }
+    &__text{
         h3{
             margin: 50px 0 30px 0;
             font-size: 18px;
             text-align: center;
             @include mq('max','md') {
-                margin: 15px 0 15px 0;
+                margin: 10px 0 10px 0;
                 font-size: 15px;
-                text-align: center;
             }                    
         }
         p{
             font-size: 15px;
+            line-height: 1.5em;
             @include mq('max','md') {
-                font-size: 11px;
+                font-size: 12px;
                 margin: 5px;
                 padding: 5px;
             }                     
@@ -408,6 +242,8 @@ export default {
             display: block;
             @include mq('max','md') {
                 font-size: 11px;
+                margin: 5px;
+                padding: 5px;
             }
             &:hover{
                 background: $hoverColor;
@@ -418,12 +254,27 @@ export default {
     }
 }
 .news{
-    width: 85%; /*固定幅*/
+    width: 85%;
     margin: 10px auto;
     padding: 0 20px;
     @include mq('max','md') {
         width: 100%;
         padding: 0 5px;
+    }
+    &__title{
+        margin-bottom: 16px;
+        @include mq('max','md') {
+            margin-bottom: 8px;
+        }
+        h2{
+            font-size: 25px;
+            color: $titleColor;
+            @include mq('max','md') {
+                margin: 5px;
+                padding: 5px;
+                font-size: 15px;
+            }
+        }
     }
     &__item{
         display: flex;
@@ -461,24 +312,8 @@ export default {
             }
         }
     }
-    &__title{
-        margin-bottom: 16px;
-        font-size: 20px;
-        h2{
-            font-size: 25px;
-            padding-left: 20px;
-            @include mq('max','md') {
-                font-size: 20px;
-            }
-        }
-        @include mq('max','md') {
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
-    }
     &__list{
         padding: 20px 12px;
-        // border-top: 1px solid $lineColor;
         @include mq('max','md') {
             padding: 10px 5px;
         }
@@ -487,7 +322,6 @@ export default {
             @include mq('max','md') {
                 font-size: 12px;
                 margin: 5px;
-                padding: 10px;
             }
             &:first-child{
                 border-top: 1px solid $lineColor;

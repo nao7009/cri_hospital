@@ -69,9 +69,19 @@ export default {
         width: 100%;
     }
     &__title{
-    width: 85%;
-    margin: 0 auto;    
-    color: $titleColor;
+        width: 85%;
+        margin: 0 auto;    
+        @include mq('max','md') {
+        }
+        h2{
+            font-size: 25px;
+            color: $titleColor;
+            @include mq('max','md') {
+                margin: 5px;
+                padding: 5px;
+                font-size: 18px;
+            }
+        }
     }
     &__contents{
         width: 85%;
@@ -83,19 +93,23 @@ export default {
     &__contentsTitle{
         border-bottom: 1px solid $lineColor;
         @include mq('max','md') {
-            margin: 30px auto 5px;
+            margin: 10px auto 5px;
         } 
         h2{
             font-size: 20px;
             color: $fontColor;
             @include mq('max','md') {
-                font-size: 16px;
+                margin: 5px;
+                padding: 5px;
+                font-size: 15px;
             }
         }           
     }
     &__about{
         width: 100%;
         margin: 0 auto;
+        @include mq('max','md') {
+        }
         p{
             font-size: 16px;
             line-height: 1.8em;
@@ -105,12 +119,16 @@ export default {
             }
         }
         ul{
-            font-size: 16px;
-            line-height: 1.2em;
-            color: $accentColor;
             @include mq('max','md') {
-                font-size: 14px;
-                line-height: 1.0em;
+            }
+            li{
+                font-size: 16px;
+                line-height: 1.2em;
+                color: $accentColor;
+                @include mq('max','md') {
+                font-size: 12px;
+                line-height: 0.2em;
+            }     
             }
         }         
     }

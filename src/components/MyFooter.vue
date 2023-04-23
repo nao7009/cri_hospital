@@ -16,6 +16,7 @@ export default {
     margin: 10px auto;
     background-color: $subColor;
     @include mq('max','md') {
+      width: 100%;
     }
     &__copyright{
         color: $copylightColor;

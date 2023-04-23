@@ -31,6 +31,8 @@ export default {
     justify-content: space-between;
     align-items: center;
     @include mq('max','md') {
+        width: 100%;
+        height: 100px;
         margin: 5px;
         padding: 5px;
     }
@@ -38,6 +40,8 @@ export default {
         width: 150px;
         height: 150px;
         @include mq('max','md') {
+            width: 120px;
+            height: 120px;
         }
         a{
             margin: 5px;
@@ -89,5 +93,4 @@ export default {
         }         
     }
 }
-
 </style>

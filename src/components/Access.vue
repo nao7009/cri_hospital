@@ -42,9 +42,18 @@ export default {
         width: 100%;
     }
     &__title{
-    width: 85%;
-    margin: 0 auto;    
-    color: $titleColor;
+        width: 85%;
+        margin: 0 auto; 
+        @include mq('max','md') {
+            width: 100%;
+        }
+        h2{
+            font-size: 25px;
+            color: $titleColor;
+            @include mq('max','md') {
+                font-size: 18px;
+        }
+        }   
     }
     &__items{
         width: 85%;
@@ -53,7 +62,6 @@ export default {
         justify-content: space-between;
         @include mq('max','md') {
             width: 100%;
-            flex-direction: column;
         }
     }
     &__info{

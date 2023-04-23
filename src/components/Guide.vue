@@ -91,13 +91,15 @@ export default {
     &__contentsTitle{
         border-bottom: 1px solid $lineColor;
         @include mq('max','md') {
-            margin: 30px auto 5px;
+            margin: 20px auto 5px;
         } 
         h2{
             font-size: 20px;
             color: $fontColor;
             @include mq('max','md') {
-                font-size: 16px;
+                margin: 5px;
+                padding: 5px;
+                font-size: 15px;
             }
         }           
     }
@@ -110,7 +112,7 @@ export default {
             font-size: 18px;
             color: $titleColor;
             @include mq('max','md') {
-                font-size: 14px;
+                font-size: 15px;
             }
         }
         p{
@@ -120,15 +122,25 @@ export default {
                 font-size: 12px;
             }
         }
+        ul{
+            @include mq('max','md') {
+            }
+            li{
+                @include mq('max','md') {
+                    font-size: 12px;
+                }
+            }
+        }
     }
     &__examinationtime{
         width: 100%;
         margin: 0 auto;
-        padding: 20px;
+        padding: 10px;
         @include mq('max','md') {
+            padding: 5px;
         }
         p{
-            font-size: 17px;
+            font-size: 18px;
             line-height: 1.8em;
             @include mq('max','md') {
                 font-size: 12px;
