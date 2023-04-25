@@ -79,13 +79,15 @@ export default {
     &__contentsTitle{
         border-bottom: 1px solid $lineColor;
         @include mq('max','md') {
-            margin: 30px auto 5px;
+            margin: 10px auto 5px;
         } 
         h2{
             font-size: 20px;
             color: $fontColor;
             @include mq('max','md') {
-                font-size: 16px;
+                margin: 5px;
+                padding: 5px;
+                font-size: 15px;
             }
         }           
     }
@@ -95,9 +97,11 @@ export default {
         @include mq('max','md') {
         }
         p{
-            font-size: 17px;
+            font-size: 18px;
             line-height: 1.8em;
             @include mq('max','md') {
+                margin: 5px;
+                padding: 5px;
                 font-size: 12px;
             }
         }

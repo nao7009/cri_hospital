@@ -17,10 +17,9 @@
                     <h2>一般健診</h2>
                 </div>
                 <div class="medicalCheck__about">
-                    <h4>Aコース健診費用：¥12,000(税込)</h4>
-                    <h4>Bコース健診費用：¥8,000(税込)</h4>
+                    <h3>Aコース健診費用：¥12,000(税込)</h3>
+                    <h3>Bコース健診費用：¥8,000(税込)</h3>
                     <table>
-                        <p>健診内容は以下の通りです。</p>
                         <tr>
                             <th></th>
                             <th>問診</th>
@@ -60,13 +59,12 @@
                     <h2>特定健診・長寿健診</h2>
                 </div>
                 <div class="medicalCheck__about">
-                    <h4>特定健診：世田谷区国民保険に加入している40～74歳の方が対象となります。<br>（自己負担費用：500円）</h4>
-                    <h4>長寿健診：後期高齢者医療制度に加入している方</h4>
+                    <h3>特定健診：世田谷区国民保険に加入している40～74歳の方が対象となります。<br>（自己負担費用：500円）</h3>
+                    <h3>長寿健診：後期高齢者医療制度に加入している方</h3>
                     <p>詳しくは世田谷区のホームページにてご確認ください。</p>
                     <p><a href="https://www.city.setagaya.lg.jp/mokuji/kurashi/003/002/006/d00127789.html">特定健診のご案内</a></p>
                     <p><a href="https://www.city.setagaya.lg.jp/mokuji/kurashi/003/003/d00022934.html">長寿健診のご案内</a></p>
                     <table>
-                        <p>健診内容は以下の通りです。</p>
                         <tr>
                             <th></th>
                             <th>問診</th>
@@ -146,6 +144,8 @@ export default {
             font-size: 20px;
             color: $fontColor;
             @include mq('max','md') {
+                margin: 5px;
+                padding: 5px;
                 font-size: 16px;
             }
         }           
@@ -158,6 +158,8 @@ export default {
             font-size: 16px;
             line-height: 1.2em;
             @include mq('max','md') {
+                margin: 5px;
+                padding: 5px;
                 font-size: 12px;
             }
         }
@@ -167,31 +169,24 @@ export default {
         margin: 0 auto;
         padding: 30px;
         @include mq('max','md') {
+            padding: 10px;
         }
         h3{
-            padding-left: 20px;
-            font-size: 18px;
-            font-weight: 600;
-            @include mq('max','md') {
-            }
-        }
-        h4{
-            margin-top: 10px;
-            padding-left: 20px;
+            margin: 10px auto;
             font-size: 16px;
             line-height: 1.8em;
             color: $accentColor;
             @include mq('max','md') {
                 font-size: 12px;
-                line-height: 1.8em;
             }
         }
         p{
             font-size: 16px;
             line-height: 1.2em;
             @include mq('max','md') {
+                margin: 5px;
+                padding: 5px;
                 font-size: 12px;
-                line-height: 1.2em;
             }
         }
         a{
@@ -212,7 +207,7 @@ export default {
             color: $titleColor;
             @include mq('max','md') {
                 padding: 5px;
-                font-size: 12px;
+                font-size: 10px;
             }
         }
         th{

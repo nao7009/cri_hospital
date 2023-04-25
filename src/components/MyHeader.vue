@@ -33,8 +33,6 @@ export default {
     @include mq('max','md') {
         width: 100%;
         height: 100px;
-        margin: 5px;
-        padding: 5px;
     }
     &__logo{
         width: 150px;
