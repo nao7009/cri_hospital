@@ -63,7 +63,7 @@ export default {
     width: 85%;
     margin: 0 auto;
     background-color: $subColor;
-    @include mq('max','md') {
+    @include mq('max','lg') {
         width: 100%;
     }
     &__title{
@@ -96,6 +96,9 @@ export default {
             padding: 5px;
             font-size: 12px;
         }
+        @include mq('max','sm') {
+            font-size: 10px;
+        }
     }
     table{
         margin: 10px;
@@ -109,6 +112,10 @@ export default {
             @include mq('max','md') {
                 font-size: 12px;
             }
+            @include mq('max','sm') {
+                font-size: 10px;
+                padding-bottom: 15px;
+            }
         }
         input{
             border: 1px solid $titleColor;
@@ -118,6 +125,9 @@ export default {
             height:25px;
             @include mq('max','md') {
                 height:20px;
+            }
+            @include mq('max','md') {
+                width: 150px;
             }
         }
         textarea{
@@ -131,6 +141,10 @@ export default {
                 width:300px;
                 height:150px;
             }
+            @include mq('max','sm') {
+                width:200px;
+                height:120px;
+            }
         }
     }
     &__button{
@@ -139,6 +153,10 @@ export default {
         border-style: none;
         border-radius: 10%;
         @include mq('max','md') {
+        }
+        @include mq('max','sm') {
+            width: 70px;
+            height: 30px;
         }
     }
 }

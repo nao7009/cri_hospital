@@ -30,9 +30,12 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include mq('max','md') {
+    @include mq('max','lg') {
         width: 100%;
         height: 100px;
+    }
+    @include mq('max','sm') {
+        height: 70px;
     }
     &__logo{
         width: 150px;
@@ -40,6 +43,10 @@ export default {
         @include mq('max','md') {
             width: 120px;
             height: 120px;
+        }
+        @include mq('max','sm') {
+            width: 70px;
+            height: 70px;
         }
         a{
             margin: 5px;
@@ -49,6 +56,10 @@ export default {
                 width: 100%;
                 @include mq('max','md') {
                 }               
+            }
+            @include mq('max','sm') {
+                margin: 0;
+                padding: 0;
             }
         }
     }
@@ -72,6 +83,11 @@ export default {
                     margin: 5px;
                     padding: 5px;
                     font-size: 12px;
+                }
+                @include mq('max','sm') {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 10px;
                 }
                 a{
                     display: block;

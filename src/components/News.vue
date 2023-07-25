@@ -54,11 +54,10 @@ export default {
     width: 85%;
     margin: 0 auto;
     background-color: $subColor;
-    @include mq('max','md') {
+    @include mq('max','lg') {
         width: 100%;
     }
     &__contents{
-        width: 85%;
         margin: 0 auto;
         padding: 0;
         @include mq('max','md') {
@@ -80,7 +79,6 @@ export default {
         }           
     }
     &__newsItem{
-        width: 85%;
         margin: 0 auto 20px;
         padding: 30px;
         background-color: #fffbe8;
@@ -95,7 +93,11 @@ export default {
             color: $titleColor;
             @include mq('max','md') {
                 padding-left: 10px;
-                font-size: 14px;
+                font-size: 15px;
+            }
+            @include mq('max','sm') {
+                padding-left: 10px;
+                font-size: 12px;
             }
         }
         h4{
@@ -105,12 +107,18 @@ export default {
             @include mq('max','md') {
                 font-size: 12px;
             }
+            @include mq('max','sm') {
+                font-size: 10px;
+            }
         } 
         p{
             font-size: 16px;
             line-height: 1.8em;
             @include mq('max','md') {
                 font-size: 12px;
+            }
+            @include mq('max','sm') {
+                font-size: 10px;
             }
         } 
     }

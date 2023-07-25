@@ -15,7 +15,7 @@ export default {
     width: 85%;
     margin: 10px auto;
     background-color: $subColor;
-    @include mq('max','md') {
+    @include mq('max','lg') {
       width: 100%;
     }
     &__copyright{

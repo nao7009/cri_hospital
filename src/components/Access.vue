@@ -38,7 +38,7 @@ export default {
     width: 85%;
     margin: 0 auto;
     background-color: $subColor;
-    @include mq('max','md') {
+    @include mq('max','lg') {
         width: 100%;
     }
     &__title{
@@ -73,12 +73,20 @@ export default {
                 margin-top: 25px;
                 font-size: 12px;
             }
+            @include mq('max','sm') {
+                margin-top: 15px;
+                font-size: 10px;
+            }
             li{
                 @include mq('max','md') {
                     margin: 5px;
                     padding: 5px;
                     line-height: 1.2;
-                }              
+                }   
+                @include mq('max','sm') {
+                    margin: 0;
+                    padding: 5px;
+                }           
             }
         }
     }
@@ -92,7 +100,11 @@ export default {
             @include mq('max','md') {
                 width: 300px;
                 height: 250px;
-            }             
+            }  
+            @include mq('max','sm') {
+                width: 180px;
+                height: 150px;
+            }            
         }
     }
 }

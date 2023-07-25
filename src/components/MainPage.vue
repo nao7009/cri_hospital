@@ -95,7 +95,7 @@ export default {
     width: 85%;
     margin: 0 auto;
     background-color: $subColor;
-    @include mq('max','md') {
+    @include mq('max','lg') {
         width: 100%;
     }
     &__title{
@@ -116,35 +116,60 @@ export default {
         align-items: center;
         background-color: #fff;
         padding-left: 0;
-        @include mq('max','md') {
+        @include mq('max','lg') {
             width: 100%;
-            height: 250px;
+            height: 300px;
             margin: 0 auto;
-            font-size: 12px;
             flex: 1;
         }
-        img{
-            @include mq('max','md') {
-                width: 250px;
+        @include mq('min-max','md','md') {
+            width: 85%;
         }
+        @include mq('max','md') {
+            height: 250px;
+            font-size: 12px;
+        }
+        @include mq('max','sm') {
+            width: 100%;
+            height: 150px;
+            font-size: 10px;
+        }
+        img{
+            @include mq('max','lg') {
+                width: 250px;
+            }
+            @include mq('max','sm') {
+                width: 150px;
+            }
         }
     }
     &__summery{
         @include mq('max','md') {
+        }
+        @include mq('max','sm') {
         }
         h2{
             font-size: 20px;
             color: $fontColor;
             @include mq('max','md') {
                 font-size: 15px;
-            }          
+            }    
+            @include mq('max','sm') {
+                margin: 0;
+                padding: 0;
+                font-size: 10px;
+            }      
         }
         p{
             font-size: 15px;
             color: $fontColor;
             @include mq('max','md') {
                 font-size: 10px;
-            }          
+            }   
+            @include mq('max','sm') {
+                margin: 5px 0 0;
+                padding: 0;
+            }        
         }
     }
     &__contents{
@@ -160,7 +185,7 @@ export default {
     margin: 10px auto 50px;
     padding: 20px 20px 50px;
     background-color: $subColor;
-    @include mq('max','md') {
+    @include mq('max','lg') {
         width: 100%;
         margin: 0 auto;
         padding: 10px;
@@ -176,6 +201,9 @@ export default {
             color: $titleColor;
             @include mq('max','md') {
                 font-size: 15px;
+            } 
+            @include mq('max','sm') {
+                font-size: 12px;
             }              
         }
         p{
@@ -188,20 +216,24 @@ export default {
                 width: 100%;
                 font-size: 10px;
                 line-height: 1.8;
-            }             
+            } 
+            @include mq('max','sm') {
+                font-size: 8px;
+                line-height: 1.2;
+            }            
         }
     }
     &__column{
         display: flex;
         justify-content: center;
-        @include mq('max','md') {
+        @include mq('max','lg') {
             flex-direction: column;
         }
     }
     &__columnItems{
         text-align: center;
         border: 1px solid $lineColor;
-        @include mq('max','md') {
+        @include mq('max','lg') {
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -217,6 +249,10 @@ export default {
                 width: 180px;
                 height: 120px;
             } 
+            @include mq('max','sm') {
+                width: 100px;
+                height: 80px;
+            } 
         }
     }
     &__text{
@@ -227,6 +263,10 @@ export default {
             @include mq('max','md') {
                 margin: 10px 0 10px 0;
                 font-size: 15px;
+            } 
+            @include mq('max','sm') {
+                margin: 10px 0 10px 0;
+                font-size: 12px;
             }                    
         }
         p{
@@ -236,12 +276,17 @@ export default {
                 font-size: 12px;
                 margin: 5px;
                 padding: 5px;
-            }                     
+            } 
+            @include mq('max','sm') {
+                margin: 0;
+                padding: 0;
+                font-size: 10px;
+            }                    
         }
-        a{
+        li{
             display: block;
             @include mq('max','md') {
-                font-size: 11px;
+                font-size: 10px;
                 margin: 5px;
                 padding: 5px;
             }
@@ -257,7 +302,7 @@ export default {
     width: 85%;
     margin: 10px auto;
     padding: 0 20px;
-    @include mq('max','md') {
+    @include mq('max','lg') {
         width: 100%;
         padding: 0 5px;
     }
@@ -274,6 +319,11 @@ export default {
                 padding: 5px;
                 font-size: 15px;
             }
+            @include mq('max','sm') {
+                margin: 5px;
+                padding: 5px;
+                font-size: 12px;
+            }
         }
     }
     &__item{
@@ -286,8 +336,12 @@ export default {
         display: flex;
         align-items: center;
         margin-right: 32px;
+        @include mq('min-max','md','lg') {
+            width: 110px;
+            margin-right: 5px;
+        }
         @include mq('max','md') {
-            width: 90px;
+            width: 70px;
             margin-right: 5px;
         }
     }
@@ -322,6 +376,9 @@ export default {
             @include mq('max','md') {
                 font-size: 12px;
                 margin: 5px;
+            }
+            @include mq('max','sm') {
+                font-size: 10px;
             }
             &:first-child{
                 border-top: 1px solid $lineColor;

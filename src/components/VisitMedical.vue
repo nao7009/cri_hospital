@@ -66,11 +66,10 @@ export default {
     width: 85%;
     margin: 0 auto;
     background-color: $subColor;
-    @include mq('max','md') {
+    @include mq('max','lg') {
         width: 100%;
     }
     &__contents{
-        width: 85%;
         margin: 0 auto;
         padding: 0;
         @include mq('max','md') {
@@ -113,6 +112,10 @@ export default {
             color: $titleColor;
             @include mq('max','md') {
                 font-size: 12px;
+            }
+            @include mq('max','sm') {
+                font-size: 10px;
+                padding: 5px;
             }
         }
         th{
